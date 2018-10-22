@@ -7,5 +7,4 @@ const digitSum = (n) => {
     }
     return result;
 };
-
 module.exports = { digitSum };
