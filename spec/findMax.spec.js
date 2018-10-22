@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { findMax } = require('../findMax');
 
-describe.only('findMax', () => {
+describe('findMax', () => {
     it('given an array with one number returns it', () => {
         expect(findMax([0])).to.equal(0);
     });

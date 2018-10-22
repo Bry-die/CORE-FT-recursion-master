@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { digitSum } = require('../digitSum');
 
-describe('digitSum', () => {
+describe.only('digitSum', () => {
     it('returns n if given a single digit', () => {
         expect(digitSum(1)).to.equal(1);
         expect(digitSum(2)).to.equal(2);
