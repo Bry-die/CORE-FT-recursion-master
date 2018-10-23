@@ -1,10 +1,7 @@
-
-const digitSum = (n) => {
-    let result = 0;
-    const arr = n.toString().split("");
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i]) result += +arr[i];
-    }
-    return result;
+const digitSum = n => {
+  let arr = n.toString().split("");
+  let result = +arr[0];
+  if (arr.length === 1) return +arr[0];
+  return (result += digitSum(+arr.slice(1).join("")));
 };
 module.exports = { digitSum };
