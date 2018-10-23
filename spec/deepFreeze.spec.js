@@ -1,10 +1,8 @@
 const { expect } = require("chai");
 const { deepFreeze } = require("../deepFreeze");
-const sinon = require("sinon");
 
-describe.only("deepFreeze", () => {
+describe("deepFreeze", () => {
   it("should return frozen for flat array", () => {
-    let spy = sinon.spy();
     const result = Object.isFrozen(deepFreeze([1, 2]));
     const result2 = Object.isFrozen(deepFreeze({ name: "Jeff" }));
     expect(result).to.eql(true);
